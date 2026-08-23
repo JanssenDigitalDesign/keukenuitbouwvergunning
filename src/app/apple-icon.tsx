@@ -1,0 +1,34 @@
+import { ImageResponse } from "next/og";
+
+// Generated from this site's own BrandIcon (see components/BrandMark.tsx)
+// so the favicon matches the header mark and brand palette exactly,
+// instead of every site sharing one generic icon.
+export const size = { width: 180, height: 180 };
+export const contentType = "image/png";
+
+export default function Icon() {
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "#160f0e",
+          color: "#c15c4a",
+          borderRadius: 36,
+        }}
+      >
+        <svg width="124" height="124" viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3.5" y="8" width="10" height="12" rx="0.5" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M13.5 20h4a2.5 2.5 0 0 0 2.5-2.5V12" stroke="currentColor" strokeWidth="1.4" strokeDasharray="1.6 1.8" />
+      <path d="M14 8h6M14 8v6" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M6.5 12h5M6.5 15h5" stroke="currentColor" strokeWidth="1.3" />
+        </svg>
+      </div>
+    ),
+    size
+  );
+}
